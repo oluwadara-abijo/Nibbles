@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CartFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorGrey">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_24"
+            android:layout_marginTop="@dimen/margin_24"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/menu"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_24"
+            android:background="@drawable/bg_white_card"
+            android:elevation="@dimen/margin_8"
+            android:padding="@dimen/margin_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_back">
+
+            <TextView
+                android:id="@+id/tv_my_order"
+                style="@style/TextStyle"
+                android:layout_marginTop="@dimen/margin_32"
+                android:text="@string/my_order"
+                android:textSize="@dimen/big_text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_items_selected"
+                style="@style/TextStyle"
+                android:text="3 items selected"
+                android:textSize="@dimen/big_text"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_my_order" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_stroked_white_rec"
+                android:contentDescription="@string/favourite"
+                android:padding="@dimen/margin_8"
+                android:src="@drawable/ic_baseline_delete_outline_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_my_order" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_orders"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_16"
+                app:layout_constraintTop_toBottomOf="@id/tv_items_selected" />
+
+            <TextView
+                android:id="@+id/tv_subtotal"
+                style="@style/TextStyle"
+                android:layout_marginTop="@dimen/margin_24"
+                android:text="Subtotal(3 items)"
+                android:textColor="@android:color/darker_gray"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rv_orders" />
+
+            <TextView
+                android:id="@+id/tv_subtotal_amount"
+                style="@style/TextStyle"
+                android:layout_marginTop="@dimen/margin_24"
+                android:text="$50.00"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rv_orders" />
+
+            <TextView
+                android:id="@+id/tv_delivery"
+                style="@style/TextStyle"
+                android:layout_marginTop="@dimen/margin_4"
+                android:text="@string/delivery_charge"
+                android:textColor="@android:color/darker_gray"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_subtotal" />
+
+            <TextView
+                android:id="@+id/tv_delivery_amount"
+                style="@style/TextStyle"
+                android:layout_marginTop="@dimen/margin_4"
+                android:text="Free delivery"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_delivery" />
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/margin_24"
+                android:background="@color/colorGrey"
+                app:layout_constraintTop_toBottomOf="@id/tv_delivery_amount" />
+
+            <TextView
+                android:id="@+id/tv_total"
+                style="@style/TextStyle"
+                android:layout_marginTop="@dimen/margin_24"
+                android:text="@string/total_amount"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/divider" />
+
+            <TextView
+                android:id="@+id/tv_total_amount"
+                style="@style/TextStyle"
+                android:text="$34.00"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/tv_total"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_total" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_checkout"
+                style="@style/ButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/margin_48"
+                android:text="@string/add_to_cart"
+                app:layout_constraintTop_toBottomOf="@id/tv_total" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

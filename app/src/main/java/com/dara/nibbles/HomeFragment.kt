@@ -124,6 +124,12 @@ class HomeFragment : Fragment(R.layout.fragment_home), CategoryAdapter.ItemClick
         )
         nibbleAdapter = NibbleAdapter(allNibbles.filter { it.category == selectedCategory }, this)
         setupNibblesRecyclerView()
+
+        // Set click listener on cart button
+        img_cart.setOnClickListener {
+            val action = HomeFragmentDirections.actionGlobalCartFragment()
+            findNavController().navigate(action)
+        }
     }
 
     private fun setupCategoriesRecyclerView() {

@@ -23,4 +23,12 @@
             android:name="nibble"
             app:argType="com.dara.nibbles.Nibble" />
     </fragment>
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.dara.nibbles.CartFragment"
+        android:label="fragment_cart"
+        tools:layout="@layout/fragment_cart" />
+    <action
+        android:id="@+id/action_global_cartFragment"
+        app:destination="@id/cartFragment" />
 </navigation>
