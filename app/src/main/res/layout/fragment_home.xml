@@ -107,7 +107,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_8"
-            app:layout_constraintTop_toBottomOf="@id/tv_most_popular" />
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@id/tv_most_popular"
+            tools:listitem="@layout/list_item_nibble" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
