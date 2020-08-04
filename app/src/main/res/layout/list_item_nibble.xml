@@ -13,7 +13,6 @@
         android:layout_height="60dp"
         android:contentDescription="@string/category"
         android:scaleType="centerCrop"
-        android:src="@drawable/cheese_burger"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -22,7 +21,6 @@
         style="@style/TextStyle"
         android:layout_width="0dp"
         android:layout_marginStart="@dimen/margin_16"
-        android:text="Chicken burger"
         android:textSize="@dimen/big_text"
         app:layout_constraintEnd_toStartOf="@id/img_more"
         app:layout_constraintHorizontal_bias="0"
@@ -30,10 +28,9 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tv_nibble_description"
+        android:id="@+id/tv_nibble_flavour"
         style="@style/TextStyle"
         android:layout_width="0dp"
-        android:text="Salty squid"
         android:textSize="@dimen/small_text"
         app:layout_constraintEnd_toStartOf="@id/img_more"
         app:layout_constraintHorizontal_bias="0"
@@ -43,10 +40,10 @@
     <TextView
         android:id="@+id/tv_nibble_amount"
         style="@style/TextStyle"
-        android:text="$100.00"
-        android:textSize="@dimen/small_text"
+        android:textSize="@dimen/normal_text"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@id/tv_nibble_name"
-        app:layout_constraintTop_toBottomOf="@id/tv_nibble_description" />
+        app:layout_constraintTop_toBottomOf="@id/tv_nibble_flavour" />
 
     <ImageView
         android:id="@+id/img_more"

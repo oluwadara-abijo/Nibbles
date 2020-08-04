@@ -9,5 +9,18 @@
         android:id="@+id/homeFragment"
         android:name="com.dara.nibbles.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_nibbleDetailFragment"
+            app:destination="@id/nibbleDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nibbleDetailFragment"
+        android:name="com.dara.nibbles.NibbleDetailFragment"
+        android:label="fragment_nibble_detail"
+        tools:layout="@layout/fragment_nibble_detail">
+        <argument
+            android:name="nibble"
+            app:argType="com.dara.nibbles.Nibble" />
+    </fragment>
 </navigation>

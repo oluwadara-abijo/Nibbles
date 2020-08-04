@@ -3,7 +3,7 @@ package com.dara.nibbles
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
-import android.widget.Toast
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.fragment_home.*
@@ -34,48 +34,92 @@ class HomeFragment : Fragment(R.layout.fragment_home), CategoryAdapter.ItemClick
 
         allNibbles = listOf(
             Nibble(
-                "Chicken Burger", R.drawable.ic_chicken_burger, "Flavoroso",
-                "$ 12.00", Category.BURGERS
+                "Chicken Burger",
+                R.drawable.ic_chicken_burger,
+                "Food consisting of one or more cooked patties of ground meat, usually beef, placed inside a bread roll or bun.",
+                "Flavoroso",
+                "$ 12.00",
+                Category.BURGERS
             ),
             Nibble(
-                "Salmon Burgers", R.drawable.ic_salmon_burger, "Salty squid",
-                "$ 14.00", Category.BURGERS
+                "Salmon Burgers",
+                R.drawable.ic_salmon_burger,
+                "Food consisting of one or more cooked patties of ground meat, usually beef, placed inside a bread roll or bun.",
+                "Salty squid",
+                "$ 14.00",
+                Category.BURGERS
             ),
             Nibble(
-                "Beef Cheese Burger", R.drawable.cheese_burger, "Mosala",
-                "$ 18.00", Category.BURGERS
+                "Beef Cheese Burger",
+                R.drawable.cheese_burger,
+                "Food consisting of one or more cooked patties of ground meat, usually beef, placed inside a bread roll or bun.",
+                "Mosala",
+                "$ 18.00",
+                Category.BURGERS
             ),
             Nibble(
-                "Vegan Burger", R.drawable.ic_vegan_burger, "Vegan corners",
-                "$ 10.00", Category.BURGERS
+                "Vegan Burger",
+                R.drawable.ic_vegan_burger,
+                "Food consisting of one or more cooked patties of ground meat, usually beef, placed inside a bread roll or bun.",
+                "Vegan corners",
+                "$ 10.00",
+                Category.BURGERS
             ),
             Nibble(
-                "Chinese noodles", R.drawable.ic_chow_mien, "Chow mien",
-                "$ 30.00", Category.NOODLES
+                "Chinese noodles",
+                R.drawable.ic_chow_mien,
+                "Food consisting of one or more cooked patties of ground meat, usually beef, placed inside a bread roll or bun.",
+                "Chow mien",
+                "$ 30.00",
+                Category.NOODLES
             ),
             Nibble(
-                "Singapore noodles", R.drawable.ic_singapore_noodles, "Gluten free",
-                "$ 20.00", Category.NOODLES
+                "Singapore noodles",
+                R.drawable.ic_singapore_noodles,
+                "Food consisting of one or more cooked patties of ground meat, usually beef, placed inside a bread roll or bun.",
+                "Gluten free",
+                "$ 20.00",
+                Category.NOODLES
             ),
             Nibble(
-                "Beef Roll", R.drawable.ic_beef_roll, "Beefy",
-                "$ 5.00", Category.ROLLS
+                "Beef Roll",
+                R.drawable.ic_beef_roll,
+                "Food consisting of one or more cooked patties of ground meat, usually beef, placed inside a bread roll or bun.",
+                "Beefy",
+                "$ 5.00",
+                Category.ROLLS
             ),
             Nibble(
-                "Bread Roll", R.drawable.ic_bread_roll, "Spiral",
-                "$ 8.00", Category.ROLLS
+                "Bread Roll",
+                R.drawable.ic_bread_roll,
+                "Food consisting of one or more cooked patties of ground meat, usually beef, placed inside a bread roll or bun.",
+                "Spiral",
+                "$ 8.00",
+                Category.ROLLS
             ),
             Nibble(
-                "Hot dog", R.drawable.ic_hot_dog, "With Ketchup",
-                "$ 6.00", Category.ROLLS
+                "Hot dog",
+                R.drawable.ic_hot_dog,
+                "Food consisting of one or more cooked patties of ground meat, usually beef, placed inside a bread roll or bun.",
+                "With Ketchup",
+                "$ 6.00",
+                Category.ROLLS
             ),
             Nibble(
-                "Pink Vodka", R.drawable.ic_pink_vodka, "Lemonade",
-                "$ 40.00", Category.DRINKS
+                "Pink Vodka",
+                R.drawable.ic_pink_vodka,
+                "Food consisting of one or more cooked patties of ground meat, usually beef, placed inside a bread roll or bun.",
+                "Lemonade",
+                "$ 40.00",
+                Category.DRINKS
             ),
             Nibble(
-                "Chapman", R.drawable.ic_chapman, "Cocktail",
-                "$ 15.00", Category.DRINKS
+                "Chapman",
+                R.drawable.ic_chapman,
+                "Food consisting of one or more cooked patties of ground meat, usually beef, placed inside a bread roll or bun.",
+                "Cocktail",
+                "$ 15.00",
+                Category.DRINKS
             )
         )
         nibbleAdapter = NibbleAdapter(allNibbles.filter { it.category == selectedCategory }, this)
@@ -107,6 +151,7 @@ class HomeFragment : Fragment(R.layout.fragment_home), CategoryAdapter.ItemClick
     }
 
     override fun onItemClick(nibble: Nibble) {
-        Toast.makeText(requireContext(), nibble.name, Toast.LENGTH_SHORT).show()
+        val action = HomeFragmentDirections.actionHomeFragmentToNibbleDetailFragment(nibble)
+        findNavController().navigate(action)
     }
 }

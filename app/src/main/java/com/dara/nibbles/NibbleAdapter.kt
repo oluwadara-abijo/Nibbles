@@ -14,13 +14,13 @@ class NibbleAdapter(
         View.OnClickListener {
         private val imageView = itemView.img_nibble_image
         private val nameTextView = itemView.tv_nibble_name
-        private val descriptionTextView = itemView.tv_nibble_description
+        private val descriptionTextView = itemView.tv_nibble_flavour
         private val amountTextView = itemView.tv_nibble_amount
 
         fun bind(nibble: Nibble) {
             imageView.setImageResource(nibble.image)
             nameTextView.text = nibble.name
-            descriptionTextView.text = nibble.description
+            descriptionTextView.text = nibble.flavour
             amountTextView.text = nibble.amount
 
             itemView.setOnClickListener(this)

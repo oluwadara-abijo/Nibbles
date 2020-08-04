@@ -11,4 +11,9 @@
     <string name="food_special_for_you">Food Special For You</string>
     <string name="category">category</string>
     <string name="more">More</string>
+    <string name="snack">Snack</string>
+    <string name="add">Add</string>
+    <string name="remove">Remove</string>
+    <string name="add_to_cart">Add to Cart</string>
+    <string name="favourite">Favourite</string>
 </resources>
