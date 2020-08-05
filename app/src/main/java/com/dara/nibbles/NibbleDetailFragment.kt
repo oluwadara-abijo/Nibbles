@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import kotlinx.android.synthetic.main.fragment_nibble_detail.*
+import java.math.RoundingMode
 
 class NibbleDetailFragment : Fragment(R.layout.fragment_nibble_detail) {
 
@@ -25,14 +26,15 @@ class NibbleDetailFragment : Fragment(R.layout.fragment_nibble_detail) {
         img_add.setOnClickListener {
             if (quantity > 0) {
                 quantity++
-                tv_quantity.text = quantity.toString()
+                getAmount()
             }
         }
 
         img_remove.setOnClickListener {
             if (quantity > 1) {
                 quantity--
-                tv_quantity.text = quantity.toString()
+                getAmount()
+
             }
         }
 
@@ -47,10 +49,18 @@ class NibbleDetailFragment : Fragment(R.layout.fragment_nibble_detail) {
 
     }
 
+    private fun getAmount() {
+        tv_quantity.text = quantity.toString()
+        val amount = nibble.amount * quantity
+        tv_nibble_amount.text =
+            "$ ${amount.toBigDecimal().setScale(2, RoundingMode.HALF_EVEN).toPlainString()}"
+    }
+
     private fun populateUI(nibble: Nibble) {
         img_nibble_image.setImageResource(nibble.image)
         tv_nibble_name.text = nibble.name
         tv_nibble_description.text = nibble.description
-        tv_nibble_amount.text = "$ ${nibble.amount.toBigDecimal().toPlainString()}"
+        tv_nibble_amount.text =
+            "$ ${nibble.amount.toBigDecimal().setScale(2, RoundingMode.HALF_EVEN).toPlainString()}"
     }
 }

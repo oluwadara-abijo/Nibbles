@@ -4,8 +4,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.fragment_nibble_detail.*
 import kotlinx.android.synthetic.main.list_item_nibble.view.*
+import java.math.RoundingMode
 
 class NibbleAdapter(
     var nibbles: List<Nibble>, val clickListener: ItemClickListener
@@ -22,7 +22,7 @@ class NibbleAdapter(
             imageView.setImageResource(nibble.image)
             nameTextView.text = nibble.name
             descriptionTextView.text = nibble.flavour
-            amountTextView.text = "$ ${nibble.amount.toBigDecimal().toPlainString()}"
+            amountTextView.text = "$ ${nibble.amount.toBigDecimal().setScale(2, RoundingMode.HALF_EVEN).toPlainString()}"
 
             itemView.setOnClickListener(this)
         }

@@ -23,8 +23,7 @@
         style="@style/TextStyle"
         android:layout_width="0dp"
         android:layout_marginStart="@dimen/margin_24"
-        android:text="Chicken Burger"
-        android:textSize="@dimen/big_text"
+        android:textSize="@dimen/normal_text"
         app:layout_constraintEnd_toStartOf="@id/tv_nibble_amount"
         app:layout_constraintStart_toEndOf="@id/img_nibble_image"
         app:layout_constraintTop_toTopOf="parent" />
@@ -65,7 +64,6 @@
     <TextView
         android:id="@+id/tv_nibble_amount"
         style="@style/TextStyle"
-        android:text="$ 16.00"
         android:textSize="@dimen/normal_text"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"

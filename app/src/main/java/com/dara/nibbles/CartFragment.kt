@@ -7,6 +7,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.fragment_cart.*
+import java.math.RoundingMode
 
 class CartFragment : Fragment(R.layout.fragment_cart), OrderAdapter.ItemClickListener {
 
@@ -90,7 +91,7 @@ class CartFragment : Fragment(R.layout.fragment_cart), OrderAdapter.ItemClickLis
             val amount = (order.nibble.amount * order.quantity)
             total += amount
         }
-        val totalString = total.toBigDecimal().toPlainString()
+        val totalString = total.toBigDecimal().setScale(2, RoundingMode.HALF_EVEN).toPlainString()
         tv_subtotal_amount.text = "$ $totalString"
         tv_total_amount.text = "$ $totalString"
     }

@@ -5,6 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.list_item_order.view.*
+import java.math.RoundingMode
 
 class OrderAdapter(
     var orders: List<Order>, val clickListener: ItemClickListener
@@ -24,7 +25,7 @@ class OrderAdapter(
             nameTextView.text = order.nibble.name
             quantityTextView.text = order.quantity.toString()
             val amount = order.quantity * order.nibble.amount
-            amountTextView.text = "$ ${amount.toBigDecimal().toPlainString()}"
+            amountTextView.text = "$ ${amount.toBigDecimal().setScale(2, RoundingMode.HALF_EVEN).toPlainString()}"
 
             addButton.setOnClickListener(this)
             removeButton.setOnClickListener(this)
