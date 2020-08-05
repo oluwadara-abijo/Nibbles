@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import kotlinx.android.synthetic.main.fragment_nibble_detail.*
 import kotlinx.android.synthetic.main.list_item_nibble.view.*
 
 class NibbleAdapter(
@@ -21,7 +22,7 @@ class NibbleAdapter(
             imageView.setImageResource(nibble.image)
             nameTextView.text = nibble.name
             descriptionTextView.text = nibble.flavour
-            amountTextView.text = nibble.amount
+            amountTextView.text = "$ ${nibble.amount.toBigDecimal().toPlainString()}"
 
             itemView.setOnClickListener(this)
         }

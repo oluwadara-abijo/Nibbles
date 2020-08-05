@@ -45,7 +45,6 @@
             <TextView
                 android:id="@+id/tv_items_selected"
                 style="@style/TextStyle"
-                android:text="3 items selected"
                 android:textSize="@dimen/big_text"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
@@ -72,7 +71,6 @@
                 android:id="@+id/tv_subtotal"
                 style="@style/TextStyle"
                 android:layout_marginTop="@dimen/margin_24"
-                android:text="Subtotal(3 items)"
                 android:textColor="@android:color/darker_gray"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/rv_orders" />
@@ -81,7 +79,6 @@
                 android:id="@+id/tv_subtotal_amount"
                 style="@style/TextStyle"
                 android:layout_marginTop="@dimen/margin_24"
-                android:text="$50.00"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/rv_orders" />
@@ -99,7 +96,7 @@
                 android:id="@+id/tv_delivery_amount"
                 style="@style/TextStyle"
                 android:layout_marginTop="@dimen/margin_4"
-                android:text="Free delivery"
+                android:text="@string/free_delivery"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@id/tv_delivery" />
@@ -124,7 +121,6 @@
             <TextView
                 android:id="@+id/tv_total_amount"
                 style="@style/TextStyle"
-                android:text="$34.00"
                 android:textSize="26sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@id/tv_total"

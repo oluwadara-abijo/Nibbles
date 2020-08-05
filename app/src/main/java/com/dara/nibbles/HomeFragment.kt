@@ -38,7 +38,7 @@ class HomeFragment : Fragment(R.layout.fragment_home), CategoryAdapter.ItemClick
                 R.drawable.ic_chicken_burger,
                 "Food consisting of one or more cooked patties of ground meat, usually beef, placed inside a bread roll or bun.",
                 "Flavoroso",
-                "$ 12.00",
+                12.00,
                 Category.BURGERS
             ),
             Nibble(
@@ -46,7 +46,7 @@ class HomeFragment : Fragment(R.layout.fragment_home), CategoryAdapter.ItemClick
                 R.drawable.ic_salmon_burger,
                 "Food consisting of one or more cooked patties of ground meat, usually beef, placed inside a bread roll or bun.",
                 "Salty squid",
-                "$ 14.00",
+                14.00,
                 Category.BURGERS
             ),
             Nibble(
@@ -54,7 +54,7 @@ class HomeFragment : Fragment(R.layout.fragment_home), CategoryAdapter.ItemClick
                 R.drawable.cheese_burger,
                 "Food consisting of one or more cooked patties of ground meat, usually beef, placed inside a bread roll or bun.",
                 "Mosala",
-                "$ 18.00",
+                18.00,
                 Category.BURGERS
             ),
             Nibble(
@@ -62,7 +62,7 @@ class HomeFragment : Fragment(R.layout.fragment_home), CategoryAdapter.ItemClick
                 R.drawable.ic_vegan_burger,
                 "Food consisting of one or more cooked patties of ground meat, usually beef, placed inside a bread roll or bun.",
                 "Vegan corners",
-                "$ 10.00",
+                10.00,
                 Category.BURGERS
             ),
             Nibble(
@@ -70,7 +70,7 @@ class HomeFragment : Fragment(R.layout.fragment_home), CategoryAdapter.ItemClick
                 R.drawable.ic_chow_mien,
                 "Food consisting of one or more cooked patties of ground meat, usually beef, placed inside a bread roll or bun.",
                 "Chow mien",
-                "$ 30.00",
+                30.00,
                 Category.NOODLES
             ),
             Nibble(
@@ -78,7 +78,7 @@ class HomeFragment : Fragment(R.layout.fragment_home), CategoryAdapter.ItemClick
                 R.drawable.ic_singapore_noodles,
                 "Food consisting of one or more cooked patties of ground meat, usually beef, placed inside a bread roll or bun.",
                 "Gluten free",
-                "$ 20.00",
+                20.00,
                 Category.NOODLES
             ),
             Nibble(
@@ -86,7 +86,7 @@ class HomeFragment : Fragment(R.layout.fragment_home), CategoryAdapter.ItemClick
                 R.drawable.ic_beef_roll,
                 "Food consisting of one or more cooked patties of ground meat, usually beef, placed inside a bread roll or bun.",
                 "Beefy",
-                "$ 5.00",
+                5.00,
                 Category.ROLLS
             ),
             Nibble(
@@ -94,7 +94,7 @@ class HomeFragment : Fragment(R.layout.fragment_home), CategoryAdapter.ItemClick
                 R.drawable.ic_bread_roll,
                 "Food consisting of one or more cooked patties of ground meat, usually beef, placed inside a bread roll or bun.",
                 "Spiral",
-                "$ 8.00",
+                8.00,
                 Category.ROLLS
             ),
             Nibble(
@@ -102,7 +102,7 @@ class HomeFragment : Fragment(R.layout.fragment_home), CategoryAdapter.ItemClick
                 R.drawable.ic_hot_dog,
                 "Food consisting of one or more cooked patties of ground meat, usually beef, placed inside a bread roll or bun.",
                 "With Ketchup",
-                "$ 6.00",
+                6.00,
                 Category.ROLLS
             ),
             Nibble(
@@ -110,7 +110,7 @@ class HomeFragment : Fragment(R.layout.fragment_home), CategoryAdapter.ItemClick
                 R.drawable.ic_pink_vodka,
                 "Food consisting of one or more cooked patties of ground meat, usually beef, placed inside a bread roll or bun.",
                 "Lemonade",
-                "$ 40.00",
+                40.00,
                 Category.DRINKS
             ),
             Nibble(
@@ -118,7 +118,7 @@ class HomeFragment : Fragment(R.layout.fragment_home), CategoryAdapter.ItemClick
                 R.drawable.ic_chapman,
                 "Food consisting of one or more cooked patties of ground meat, usually beef, placed inside a bread roll or bun.",
                 "Cocktail",
-                "$ 15.00",
+                15.00,
                 Category.DRINKS
             )
         )

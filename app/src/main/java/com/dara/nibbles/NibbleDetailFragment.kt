@@ -20,8 +20,6 @@ class NibbleDetailFragment : Fragment(R.layout.fragment_nibble_detail) {
         nibble = args.nibble
         populateUI(nibble)
 
-        img_back.setOnClickListener { findNavController().navigateUp() }
-
         tv_quantity.text = quantity.toString()
 
         img_add.setOnClickListener {
@@ -37,12 +35,22 @@ class NibbleDetailFragment : Fragment(R.layout.fragment_nibble_detail) {
                 tv_quantity.text = quantity.toString()
             }
         }
+
+        // Set click listener on buttons
+        img_back.setOnClickListener { findNavController().navigateUp() }
+
+        // Set click listener on cart button
+        img_cart.setOnClickListener {
+            val action = NibbleDetailFragmentDirections.actionGlobalCartFragment()
+            findNavController().navigate(action)
+        }
+
     }
 
     private fun populateUI(nibble: Nibble) {
         img_nibble_image.setImageResource(nibble.image)
         tv_nibble_name.text = nibble.name
         tv_nibble_description.text = nibble.description
-        tv_nibble_amount.text = nibble.amount
+        tv_nibble_amount.text = "$ ${nibble.amount.toBigDecimal().toPlainString()}"
     }
 }

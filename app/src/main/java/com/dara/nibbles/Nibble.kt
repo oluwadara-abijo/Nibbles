@@ -9,6 +9,6 @@ data class Nibble(
     val image: Int,
     val description: String,
     val flavour: String,
-    val amount: String,
+    val amount: Double,
     val category: Category
 ) : Parcelable
